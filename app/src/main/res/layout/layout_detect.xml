@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout3"
+        app:layout_constraintVertical_bias="0.082" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="292dp"
+        android:layout_height="154dp"
+        android:src="@drawable/ic_meter"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout3"
+        app:layout_constraintVertical_bias="0.276" />
+
+    <Button
+        android:id="@+id/capture2"
+        android:layout_width="125dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="288dp"
+        android:layout_marginEnd="140dp"
+        android:background="@drawable/button_back2"
+        android:text="Detect"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout3" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="374dp"
+        android:layout_height="200dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/back_rect_green"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:textSize="24sp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/head"
+            android:text="Enter the name of your food"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/food_name"
+            android:layout_width="283dp"
+            android:layout_height="57dp"
+            android:layout_below="@+id/head"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:id="@+id/result"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/black"
+            android:layout_below="@+id/food_name"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Detect the carbon footprint of your food"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
